@@ -1,0 +1,32 @@
+{
+    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.0",
+    "speak": "Happy Birthday",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "**Happy Birthday @{outputs('Get_user_profile_(V2)')?['body/displayName']}**",
+            "horizontalAlignment": "Center",
+            "size": "large",
+            "weight": "bolder",
+            "Color": "Accent"
+        },
+        {
+            "type": "TextBlock",
+            "text": "We all hope you have a fanstastic day!",
+            "size": "Medium",
+            "horizontalAlignment": "Center",
+            "weight": "bolder",
+            "Color": "Danger"
+        },
+        {
+            "type": "Image",
+            "url": "https://img.freepik.com/free-vector/happy-birthday-you-lettering_23-2148453222.jpg",
+            "horizontalAlignment": "Center"
+        }
+    ],
+    "msteams": {
+        "width": "Full"
+    }
+}
