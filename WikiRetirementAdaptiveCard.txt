@@ -1,0 +1,30 @@
+{
+    "type": "AdaptiveCard",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "Wiki Retirement and the future of note taking in Teams Channels",
+            "size": "large",
+            "weight": "bolder",
+            "color": "accent",
+            "wrap": true,
+            "horizontalAlignment": "left",
+            "margin": "medium"
+        },
+{
+            "type": "Image",
+            "url": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE5egwT?ver=2d0e",
+            "size": "auto",
+            "horizontalAlignment": "center"
+        },
+        {
+            "type": "TextBlock",
+            "text": "**Wikis in Microsoft Teams will be retired** and note taking in Teams channels will be powered by **OneNote**.\n\n\n\n‌‌Starting in **mid-February**, users will not be able to create new Wikis but will still be able to access and edit existing ones. They will be able to export their wikis content to OneNote notebooks in a Team standard channel and use the Notes tab to collaborate going forward.",
+            "wrap": true,
+            "horizontalAlignment": "left",
+            "margin": "medium"
+        }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.0"
+}
