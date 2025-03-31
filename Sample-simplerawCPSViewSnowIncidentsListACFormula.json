@@ -1,0 +1,23 @@
+{
+  type: "AdaptiveCard",
+  version: "1.5",
+  body: [
+    {
+      type: "TextBlock",
+      text: "Open Incidents",
+      weight: "bolder",
+      size: "large"
+    },
+    {
+      type: "Container",
+      items: 
+        ForAll(Topic.Requests.result,
+          {
+            type: "TextBlock",
+            text: "- Incident Number: " & ThisRecord.number & ", Title: " & ThisRecord.short_description & ",  Description: " & ThisRecord.description & ", Opened On: " & DateValue(ThisRecord.opened_at) & ", State: " & ThisRecord.state & ", Assigned To: " & ThisRecord.assigned_to,
+            wrap: true
+          }
+      )
+    }
+  ]
+}
