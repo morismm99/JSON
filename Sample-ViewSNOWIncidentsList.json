@@ -1,0 +1,76 @@
+{
+  type: "AdaptiveCard",
+  version: "1.5",
+  body: [
+      {
+      type: "TextBlock",
+      text: "Open Incidents",
+      weight: "bolder",
+      size: "large",
+      horizontalAlignmen: "Center"
+      },
+      {
+      type: "Container",
+      spacing: "Large",
+      style: "emphasis",
+      items: 
+        ForAll(Topic.Requests.result,
+          {
+            type: "ColumnSet",
+            columns: [
+                  {
+                      type: "Column",
+                      items: [
+                          {
+                              type: "TextBlock",
+                              text: "Incident Number: " & ThisRecord.number,
+                              wrap: true,
+                              size: "Medium",
+                              weight: "Bolder"
+                          },
+                             {
+                              type: "TextBlock",
+                              text: "Opened on: " & DateValue(ThisRecord.opened_at),
+                              wrap: true,
+                              size: "Small",
+                              isSubtle: true,
+                              weight: "Bolder",
+                              color: "Attention"
+                          },
+                          {
+                              type: "TextBlock",
+                              text: "**Title**: " & ThisRecord.short_description,
+                              wrap: true,
+                              size: "Small",
+                              isSubtle: true,
+                              weight: "Bolder"
+                          },
+                          {
+                              type: "TextBlock",
+                              text: "Description: " & ThisRecord.description,
+                              wrap: true,
+                              size: "Small",
+                              isSubtle: true
+                          },
+                          {
+                              type: "TextBlock",
+                              text: "State: " & ThisRecord.state,
+                              wrap: true,
+                              size: "Small",
+                              isSubtle: true
+                          },
+                          {
+                              type: "TextBlock",
+                              text: "Assigned To: " & ThisRecord.assigned_to,
+                              wrap: true,
+                              size: "Small",
+                              isSubtle: true
+                          }
+                      ]
+                  }
+              ]
+          }
+        )
+      }
+  ]
+  }
